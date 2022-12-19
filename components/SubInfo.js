@@ -1,23 +1,41 @@
 import { View, Text, Image } from "react-native";
 import { SIZES, SHADOWS, FONTS, COLORS, assets } from "../constants";
 
-export const NFTTitle = ({title, subtitle, titleSize, subtitleSize}) => {
+export const NFTTitle = ({ title, subtitle, titleSize, subtitleSize }) => {
     return (
         <View>
-            <Text style={{fontFamily: FONTS.semiBold, fontSize: titleSize}}>{title}</Text>
-            <Text style={{fontFamily: FONTS.regular, fontSize: subtitleSize}}>{subtitle}</Text>
+            <Text style={{ fontFamily: FONTS.semiBold, fontSize: titleSize }}>
+                {title}
+            </Text>
+            <Text style={{ fontFamily: FONTS.regular, fontSize: subtitleSize }}>
+                {subtitle}
+            </Text>
         </View>
     );
 };
 
-export const EthPrice = ({price}) => {
+export const EthPrice = ({ price }) => {
     return (
-        <View style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-        }}>
-            <Image source={assets.eth} resizeMode="contain" style={{width: 20, height: 20, marginRight: 2}}/>
-            <Text style={{fontFamily: FONTS.medium, fontSize: SIZES.font, color: COLORS.primary}}>{price}</Text>
+        <View
+            style={{
+                flexDirection: "row",
+                alignItems: "center",
+            }}
+        >
+            <Image
+                source={assets.eth}
+                resizeMode="contain"
+                style={{ width: 20, height: 20, marginRight: 2 }}
+            />
+            <Text
+                style={{
+                    fontFamily: FONTS.medium,
+                    fontSize: SIZES.font,
+                    color: COLORS.primary,
+                }}
+            >
+                {price}
+            </Text>
         </View>
     );
 };
@@ -25,7 +43,7 @@ export const EthPrice = ({price}) => {
 export const ImageCmp = ({ imgUrl, index }) => {
     return (
         <Image
-            source={(imgUrl)}
+            source={imgUrl}
             resizeMode="contain"
             style={{
                 width: 48,
@@ -66,27 +84,31 @@ export const EndDate = () => {
                 paddingHorizontal: SIZES.font,
                 paddingVertical: SIZES.base,
                 backgroundColor: COLORS.white,
-                justifyContent: 'center',
-                alignContent: 'center',
+                justifyContent: "center",
+                alignContent: "center",
                 ...SHADOWS.light,
                 elevation: 1,
-                maxWidth: '50%'
+                maxWidth: "50%",
             }}
         >
-            <Text style={{
-                fontFamily: FONTS.regular,
-                fontSize: SIZES.small,
-                color: COLORS.primary
-            }}>
-                Ending in: 
+            <Text
+                style={{
+                    fontFamily: FONTS.regular,
+                    fontSize: SIZES.small,
+                    color: COLORS.primary,
+                }}
+            >
+                Ending in:
             </Text>
 
-            <Text style={{
-                fontFamily: FONTS.semiBold,
-                fontSize: SIZES.medium,
-                color: COLORS.primary
-            }}>
-                12:30m 
+            <Text
+                style={{
+                    fontFamily: FONTS.semiBold,
+                    fontSize: SIZES.medium,
+                    color: COLORS.primary,
+                }}
+            >
+                12:30m
             </Text>
         </View>
     );
